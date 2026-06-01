@@ -25,6 +25,17 @@ A full-stack containerized application for managing products, customers, orders,
 - Docker Desktop installed
 - Git
 
+## 🌐 Deployment
+
+**Ready to deploy?** See [FINAL_SUBMISSION.md](FINAL_SUBMISSION.md) for complete deployment instructions to:
+- Docker Hub
+- Render (Backend)
+- Vercel (Frontend)
+
+**Automated scripts available**:
+- `push-to-dockerhub.ps1` (PowerShell)
+- `push-to-dockerhub.bat` (CMD)
+
 ## 🚀 Quick Start
 
 1. **Clone the repository**
