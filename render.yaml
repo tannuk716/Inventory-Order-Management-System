@@ -1,16 +1,17 @@
 services:
   - type: web
-    name: inventory-backend
-    runtime: python
+    name: inventory-backend-ujim
+    env: python
     region: oregon
     plan: free
     branch: main
     rootDir: backend
-    buildCommand: pip install -r requirements.txt
+    buildCommand: pip install --upgrade pip && pip install -r requirements.txt
     startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
     envVars:
       - key: DATABASE_URL
         value: postgresql://neondb_owner:npg_JXw0QmWOlhk9@ep-square-dust-ap4jl513.us-east-1.aws.neon.tech/neondb?sslmode=require
       - key: CORS_ORIGINS
         value: https://frontend-kappa-three-83.vercel.app
-    healthCheckPath: /
+      - key: PYTHON_VERSION
+        value: 3.11.0
