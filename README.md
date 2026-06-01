@@ -113,25 +113,16 @@ docker-compose down -v
 
 ## 📝 Environment Variables
 
-See `.env.example` for required environment variables:
-- Database credentials
-- CORS origins
-- API URL
+Create a `.env` file based on `.env.example`:
 
-## 🚢 Deployment
-
-See [DEPLOYMENT.md](DEPLOYMENT.md) for detailed deployment instructions for:
-- Backend: Render, Railway, Fly.io
-- Frontend: Vercel, Netlify
-- Docker Hub image publishing
-
-## 📖 Additional Documentation
-
-- [DEPLOYMENT.md](DEPLOYMENT.md) - Production deployment guide
-- [TESTING.md](TESTING.md) - Testing instructions
-- [LOCAL_SETUP.md](LOCAL_SETUP.md) - Run without Docker
-- [QUICKSTART.md](QUICKSTART.md) - Detailed quick start guide
-- [SUBMISSION.md](SUBMISSION.md) - Project submission checklist
+```env
+POSTGRES_USER=inventory_user
+POSTGRES_PASSWORD=your_password
+POSTGRES_DB=inventory_db
+DATABASE_URL=postgresql://inventory_user:your_password@db:5432/inventory_db
+CORS_ORIGINS=http://localhost:3000
+REACT_APP_API_URL=http://localhost:8000
+```
 
 ## 🤝 Contributing
 
